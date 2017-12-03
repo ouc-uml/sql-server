@@ -1,0 +1,20 @@
+drop table 图书信息表
+drop table 单本表
+drop table 用户表
+drop table 管理员表
+drop table 借阅表
+drop table 预约表
+drop table 荐购表
+drop table 消息表
+drop table 管理员表
+create table 图书信息表(ISBN string, 书名 string, 类别 string, 编著人 string, 出版社 string, 入库时间 string, 负责人工号 string)
+create table 单本表(ISBN string, 单本编号 int, 状态 int)
+create table 用户表(账号 string, 密码 string, 昵称 string, 用户级别 int, 状态 int, 注册时间 string)
+create table 管理员表(账号 string, 密码 string, 管理员级别 int, 状态 int, 注册时间 string)
+create table 借阅表(账号 string, ISBN string, 单本编号 int, 借阅时间 string, 结束时间 string, 状态 int)
+create table 预约表(账号 string, ISBN string, 单本编号 int, 预约时间 string, 终止时间 string, 状态 int)
+create table 荐购表(账号 string, ISBN string, 书名 string, 荐购时间 string,  状态 int)
+create table 消息表(账号1 string, 账号2 string, 消息 string)
+create index on 图书信息表(书名, 类别, 编著人, 出版社)
+insert into 管理员表 values(uml, 123456, 1, 0, 2017.12.3.15)
+
